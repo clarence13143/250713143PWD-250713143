@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Formulir Pendaftaran Workshop</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <h1>Formulir Pendaftaran Workshop</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        <table cellspacing="4" cellpadding="4" border="1"
+                style="border-collapse:collapse; width:100%;">  
+            <tr>
+                <td style="width:32%;">
+                    <label for="nama"><strong>Nama Lengkap</strong></label>
+                </td>
+                <td><input type="text" name="nama" size="30" /></td>
+            </tr>
+            <tr>
+                <td style="width:32%;" >
+                    <label for="npm"><strong>NPM</strong></label>
+                </td>
+                <td><input type="text" name="npm" size="30" /></td>
+            </tr>
+            <tr>
+                <td style="width:32%;" >
+                    <label for="prodi"><strong>Program Studi</strong>
+                    </label>
+                </td>
+                <td>
+                    <select id="prodi" name="prodi">  
+                        <option>Informatika</option>
+                        <option>Sistem Informasi</option>
+                        <option>Teknik Industri</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:32%;">
+                    <strong>Jenis Kelamin</strong>
+                </td>
+                <td style="width:32%;">
+                    <input type="radio" name="jenis_kelamin" value="Laki-laki" id="laki" />
+                    <label for="laki">Laki-laki</label>
+
+                    <input type="radio" name="jenis_kelamin" value="Perempuan" id="perempuan" />
+                    <label for="perempuan">Perempuan</label>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:32%;">
+                    <label for="email"><strong>Alamat email</strong></label>
+                </td>
+                <td><input type="text" id="email" name="email" size="30" /></td>
+            </tr>
+            <tr>
+                <td style="width:32%;">
+                    <label for="telepon"><strong>Nomor Telepon</strong></label>
+                </td>
+                <td><input type="text" id="telepon" name="telepon" size="30" /></td>
+            </tr>
+            <tr>
+                <td style="width:32%;">
+                    <label for="asal"><strong>Asal Daerah</strong></label>
+                </td>
+                <td><input type="text" id="asal" name="asal" size="30" /></td>
+            </tr>
+
+            <tr>
+                <td style="width:32%;">
+                    <strong>Jenis Peserta</strong>
+                </td>
+                <td style="width:32%;">
+                    <input type="radio" name="jenis_peserta" value="Mahasiswa" id="mahasiswa" />
+                    <label for="mahasiswa">Mahasiswa</label>
+
+                    <input type="radio" name="jenis_peserta" value="Umum" id="umum" />
+                    <label for="umum">Umum</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="width:32%; vertical-align:top;">
+                    <strong>Materi Workshop</strong>
+                </td>
+                <td style="width:32%; vertical-align:top;">
+                    <p>
+                        <input type="checkbox" id="UI/UX Design"
+                            name="materi workshop" 
+                            value="UI/UX Design" />
+                        <label for="UI/UX Design">UI/UX Design</label>
+
+                        <input type="checkbox" id="Web Development"
+                            name="materi workshop" 
+                            value="Web Development" />
+                        <label for="Web Development">Web Development</label>
+
+                        <input type="checkbox" id="Data Analysis"
+                            name="materi workshop" 
+                            value="Data Analysis" />
+                        <label for="Data Analysis">Data Analysis</label>
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="width:32%; vertical-align:top;">
+                    <label for="alasan"><strong>Harapan Setelah Mengikuti Workshop</strong></label>
+                </td>
+                <td style="width:32%; vertical-align:top;">
+                    <textarea id="alasan" name="alasan" rows="8" cols="30"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:32%;" >
+                    <label><strong>Jenis Pembayaran</strong></label>
+                </td>
+                <td style="width:32%;" >
+                    <input type="radio" name="jenis_bayar" value="QRIS" id="qris" />
+                    <label for="qris">QRIS</label>
+
+                    <input type="radio" name="jenis_bayar" value="Transfer Bank" id="transfer" />
+                    <label for="transfer">Transfer Bank</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <input type="submit" name="daftar" value="Daftar" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
