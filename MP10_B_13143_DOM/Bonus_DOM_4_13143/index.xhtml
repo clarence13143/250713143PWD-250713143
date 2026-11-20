@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bonus_DOM_4_3143</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            text-align:center;
+        }
+
+        .remote{
+            width:300px;
+            margin:auto;
+            border:1px solid black;
+            padding:20px;
+            border-radius:10px;
+        }
+
+        button{
+            padding:10px;
+            margin:5px;
+        }
+
+        #display{
+            margin-top:15px;
+            font-size:20px;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="remote">
+
+    <h2>Remote AC</h2>
+
+    <button onclick="nyalakan()">
+        ON
+    </button>
+
+    <button onclick="matikan()">
+        OFF
+    </button>
+
+    <br><br>
+
+    <button onclick="turunTemp()">
+        -
+    </button>
+
+    <button onclick="naikTemp()">
+        +
+    </button>
+
+    <div id="display">
+
+        Status : OFF
+        <br>
+        Suhu : 24°C
+
+    </div>
+
+</div>
+
+<script>
+
+let suhu = 24;
+let statusAC = false;
+
+function updateDisplay(){
+
+    document.getElementById("display").innerHTML =
+        "Status : " +
+        (statusAC ? "ON" : "OFF") +
+        "<br>" +
+        "Suhu : " +
+        suhu + "°C";
+}
+
+function nyalakan(){
+    statusAC = true;
+    updateDisplay();
+}
+
+function matikan(){
+    statusAC = false;
+    updateDisplay();
+}
+
+function naikTemp(){
+
+    if(statusAC){
+
+        if(suhu < 30){
+            suhu++;
+            updateDisplay();
+        }
+
+    }else{
+        alert("AC masih OFF");
+    }
+}
+
+function turunTemp(){
+
+    if(statusAC){
+
+        if(suhu > 16){
+            suhu--;
+            updateDisplay();
+        }
+
+    }else{
+        alert("AC masih OFF");
+    }
+}
+
+</script>
+
+</body>
+</html>
