@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+    <title>jQuery Hover</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 40px;
+        }/*body 1*/
+        #kartu {
+            background-color: white;
+            width: 250px;
+            margin: 30px auto;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #cccccc;
+            transition: 0.3s;
+        }/*kartu 2*/
+        #kartu h2 {
+            color: #333333;
+        }/*kartu 2*/
+        #kartu p {
+            color: #666666;
+        }/*kartu 3*/
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#kartu").hover(
+            function(){
+                $(this).css({
+                    "border-color": "green",
+                    "background-color": "#d1ffd1",
+                    "transform": "scale(1.05)"
+                });
+                $("#status").text("Mouse berada di atas kartu!")
+            }, 
+            function(){
+                $(this).css({
+                    "border-color": "#cccccc",
+                    "background-color": "white",
+                    "transform": "scale(1)"
+                });
+                $("#status").text("Arahkan mouse ke kartu!")
+            });
+        });
+    </script>
+    </head>
+
+    <body>
+        <h1>Contoh jQuery Hover</h1>
+        <p id="status">Arahkan mouse ke kartu!</p>
+        <div id="kartu">
+            <h2>Informasi Perpustakaan</h2>
+            <p>Nama: Perpustakaan UAJY</p>
+            <p>Layanan: Peminjaman Buku</p>
+            <p>Jam Operasional: 08.00 - 16.00</p>
+        </div>
+    </body>
+    </html>
